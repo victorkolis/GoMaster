@@ -4,11 +4,18 @@ import "fmt"
 
 func main() {
 	
-	fmt.Print(SquareSum([1]))
+	fmt.Print(SquareSum([]int{1, 2}))
 	
 }
 
 func SquareSum(numbers []int) int {
 	
-	return numbers
+	sum := 0
+	
+	for _, number := range numbers {
+		
+		sum += number * number
+	}
+	
+	return sum
 }
